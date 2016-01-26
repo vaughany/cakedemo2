@@ -61,8 +61,7 @@ class CommentsTable extends Table
 
         $validator
             ->add('deleted', 'valid', ['rule' => 'datetime'])
-            ->requirePresence('deleted', 'create')
-            ->notEmpty('deleted');
+            ->allowEmpty('deleted');
 
         return $validator;
     }
