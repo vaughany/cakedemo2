@@ -33,6 +33,7 @@ class PostsTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('Muffin/Trash.Trash');
+        $this->addBehavior('Muffin/Slug.Slug');
 
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
@@ -66,13 +67,15 @@ class PostsTable extends Table
             ->add('title', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
+            ->allowEmpty('slug');
+
+        $validator
             ->requirePresence('body', 'create')
             ->notEmpty('body');
 
         $validator
             ->add('deleted', 'valid', ['rule' => 'datetime'])
-            ->requirePresence('deleted', 'create')
-            ->notEmpty('deleted');
+            ->allowEmpty('deleted');
 
         return $validator;
     }

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a40f9c0604d26f94d534d5379f5471db",
-    "content-hash": "1bec4866fbeb62a63b4657d421fd6944",
+    "hash": "71baebcc6a57f3e01b68c777ea749962",
+    "content-hash": "68aa83b1b63bfc96428fd8d5b900d952",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -381,6 +381,64 @@
                 "php mobile detect"
             ],
             "time": "2015-12-24 16:37:50"
+        },
+        {
+            "name": "muffin/slug",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UseMuffin/Slug.git",
+                "reference": "678ef1420b9a2c927bf481c28c3d1ec3c4776c5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UseMuffin/Slug/zipball/678ef1420b9a2c927bf481c28c3d1ec3c4776c5e",
+                "reference": "678ef1420b9a2c927bf481c28c3d1ec3c4776c5e",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/orm": "3.*"
+            },
+            "require-dev": {
+                "cakephp/cakephp": "~3.0",
+                "cocur/slugify": "^1.2",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Muffin\\Slug\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jad Bitar",
+                    "homepage": "http://jadb.io",
+                    "role": "Author"
+                },
+                {
+                    "name": "ADmad",
+                    "homepage": "https://github.com/ADmad",
+                    "role": "Author"
+                },
+                {
+                    "name": "Others",
+                    "homepage": "https://github.com/usemuffin/slug/graphs/contributors"
+                }
+            ],
+            "description": "Slugging support for CakePHP 3 ORM",
+            "homepage": "https://github.com/usemuffin/slug",
+            "keywords": [
+                "cakephp",
+                "muffin",
+                "orm",
+                "slug"
+            ],
+            "time": "2016-01-21 15:16:43"
         },
         {
             "name": "muffin/trash",
