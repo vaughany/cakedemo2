@@ -1,6 +1,6 @@
 #!/bin/bash
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
-DB="cakedemo1"
+DB="cakedemo2"
 
 echo -e "\e[1mImporting SQL dump\e[0m"
 
