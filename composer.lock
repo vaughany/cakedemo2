@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ca03915a4a3afc0c0ad2f7f9fbec9bc9",
-    "content-hash": "9fea73e2d6adda185814458c5e98e795",
+    "hash": "a40f9c0604d26f94d534d5379f5471db",
+    "content-hash": "1bec4866fbeb62a63b4657d421fd6944",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -384,23 +384,22 @@
         },
         {
             "name": "muffin/trash",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UseMuffin/Trash.git",
-                "reference": "9cb822ac53466c83685433f29e1eb904d1cb504e"
+                "reference": "03af4f131ce5a6a9dc98003904d83344c42493c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UseMuffin/Trash/zipball/9cb822ac53466c83685433f29e1eb904d1cb504e",
-                "reference": "9cb822ac53466c83685433f29e1eb904d1cb504e",
+                "url": "https://api.github.com/repos/UseMuffin/Trash/zipball/03af4f131ce5a6a9dc98003904d83344c42493c5",
+                "reference": "03af4f131ce5a6a9dc98003904d83344c42493c5",
                 "shasum": ""
             },
             "require": {
-                "cakephp/orm": "3.*"
+                "cakephp/cakephp": "^3.0"
             },
             "require-dev": {
-                "cakephp/cakephp": "3.*",
                 "phpunit/phpunit": "^4.8"
             },
             "type": "cakephp-plugin",
@@ -429,15 +428,14 @@
                     "homepage": "https://github.com/usemuffin/trash/graphs/contributors"
                 }
             ],
-            "description": "Adds soft delete support to CakePHP 3  ORM tables.",
+            "description": "Adds soft delete support to CakePHP 3 tables.",
             "homepage": "https://github.com/usemuffin/trash",
             "keywords": [
                 "cakephp",
                 "muffin",
-                "orm",
                 "trash"
             ],
-            "time": "2016-01-20 19:13:54"
+            "time": "2015-12-06 19:08:03"
         },
         {
             "name": "nesbot/carbon",
@@ -1315,7 +1313,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "muffin/trash": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,
