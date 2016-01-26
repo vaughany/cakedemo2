@@ -32,6 +32,9 @@ class CommentsTable extends Table
 
         $this->addBehavior('Timestamp');
         $this->addBehavior('Muffin/Trash.Trash');
+        $this->addBehavior('CounterCache', [
+            'Posts' => ['comment_count']
+        ]);
 
         $this->belongsTo('Posts', [
             'foreignKey' => 'post_id',

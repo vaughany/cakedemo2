@@ -34,6 +34,9 @@ class PostsTable extends Table
         $this->addBehavior('Timestamp');
         $this->addBehavior('Muffin/Trash.Trash');
         $this->addBehavior('Muffin/Slug.Slug');
+        $this->addBehavior('CounterCache', [
+            'Users' => ['post_count']
+        ]);
 
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
