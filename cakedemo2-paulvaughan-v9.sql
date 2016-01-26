@@ -13,11 +13,12 @@ CREATE TABLE `comments` (
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   FULLTEXT KEY `body` (`body`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `comments` VALUES (1,'I feel happy! I feel happy!!',1,1,'2016-01-26 10:52:58','2016-01-26 11:18:28');
+INSERT INTO `comments` VALUES (1,'I feel happy! I feel happy!!',1,1,'2016-01-26 10:52:58','2016-01-26 11:18:28',NULL);
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `posts` (
@@ -27,12 +28,13 @@ CREATE TABLE `posts` (
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`),
   FULLTEXT KEY `body` (`body`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `posts` VALUES (1,'Rumours of my death have been greatly exaggerated','No, really!',1,'2016-01-26 10:52:14','2016-01-26 11:20:26');
+INSERT INTO `posts` VALUES (1,'Rumours of my death have been greatly exaggerated','No, really!',1,'2016-01-26 10:52:14','2016-01-26 11:20:26',NULL);
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `posts_tags` (
@@ -56,12 +58,13 @@ CREATE TABLE `tags` (
   `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `tags` VALUES (1,'development','2016-01-26 11:19:23','2016-01-26 11:19:23');
-INSERT INTO `tags` VALUES (2,'narcissistic','2016-01-26 11:19:42','2016-01-26 11:20:06');
+INSERT INTO `tags` VALUES (1,'development','2016-01-26 11:19:23','2016-01-26 11:19:23',NULL);
+INSERT INTO `tags` VALUES (2,'narcissistic','2016-01-26 11:19:42','2016-01-26 11:20:06',NULL);
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
@@ -72,9 +75,10 @@ CREATE TABLE `users` (
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `users` VALUES (1,'paulvaughan','p@55w0rd','Paul Vaughan','paulvaughan@example.com','2016-01-26 10:51:29','2016-01-26 11:18:08');
+INSERT INTO `users` VALUES (1,'paulvaughan','p@55w0rd','Paul Vaughan','paulvaughan@example.com','2016-01-26 10:51:29','2016-01-26 11:18:08',NULL);

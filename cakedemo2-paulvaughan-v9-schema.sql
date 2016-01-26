@@ -13,6 +13,7 @@ CREATE TABLE `comments` (
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   FULLTEXT KEY `body` (`body`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -26,6 +27,7 @@ CREATE TABLE `posts` (
   `user_id` int(10) unsigned NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`),
   FULLTEXT KEY `body` (`body`)
@@ -38,6 +40,7 @@ CREATE TABLE `tags` (
   `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -52,6 +55,7 @@ CREATE TABLE `users` (
   `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
+  `deleted` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `username` (`username`)
