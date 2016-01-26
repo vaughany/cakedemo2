@@ -42,25 +42,6 @@ INSERT INTO `posts` VALUES (2,'Something Something Darkside','something-somethin
 INSERT INTO `posts` VALUES (3,'Grr!!','grr','Argh!!',1,0,'2016-01-26 15:02:54','2016-01-26 15:04:17',NULL);
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `posts_tags` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `post_id` int(10) unsigned NOT NULL,
-  `tag_id` int(10) unsigned NOT NULL,
-  `created` datetime NOT NULL,
-  `modified` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `post_key` (`post_id`),
-  KEY `tag_key` (`tag_id`),
-  CONSTRAINT `posts_tags_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`),
-  CONSTRAINT `posts_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-INSERT INTO `posts_tags` VALUES (2,2,2,'2016-01-26 14:05:06','2016-01-26 14:05:06');
-INSERT INTO `posts_tags` VALUES (3,1,1,'2016-01-26 14:57:59','2016-01-26 14:57:59');
-INSERT INTO `posts_tags` VALUES (4,1,2,'2016-01-26 14:58:35','2016-01-26 14:58:35');
-INSERT INTO `posts_tags` VALUES (6,3,2,'2016-01-26 15:04:17','2016-01-26 15:04:17');
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
@@ -92,3 +73,22 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 INSERT INTO `users` VALUES (1,'paulvaughan','p@55w0rd','Paul Vaughan','paulvaughan@example.com',3,'2016-01-26 10:51:29','2016-01-26 11:18:08',NULL);
 INSERT INTO `users` VALUES (2,'santa','Xm@5','Saint Nicholas','santa@example.com',0,'2016-01-26 13:52:33','2016-01-26 13:52:33',NULL);
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `posts_tags` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `post_id` int(10) unsigned NOT NULL,
+  `tag_id` int(10) unsigned NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `post_key` (`post_id`),
+  KEY `tag_key` (`tag_id`),
+  CONSTRAINT `posts_tags_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`),
+  CONSTRAINT `posts_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+INSERT INTO `posts_tags` VALUES (2,2,2,'2016-01-26 14:05:06','2016-01-26 14:05:06');
+INSERT INTO `posts_tags` VALUES (3,1,1,'2016-01-26 14:57:59','2016-01-26 14:57:59');
+INSERT INTO `posts_tags` VALUES (4,1,2,'2016-01-26 14:58:35','2016-01-26 14:58:35');
+INSERT INTO `posts_tags` VALUES (6,3,2,'2016-01-26 15:04:17','2016-01-26 15:04:17');
