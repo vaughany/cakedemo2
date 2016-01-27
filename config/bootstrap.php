@@ -183,6 +183,7 @@ Request::addDetector('tablet', function ($request) {
 Plugin::load('Migrations');
 Plugin::load('Muffin/Trash');
 Plugin::load('Muffin/Slug');
+Plugin::load('Gourmet/Faker');
 
 // Only try to load DebugKit in development mode
 // Debug Kit should not be installed on a production system
