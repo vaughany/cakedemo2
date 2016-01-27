@@ -12,7 +12,8 @@
         "cakephp/plugin-installer": "*",
         "muffin/trash": "1.*",
         "muffin/slug": "~1.0",
-        "gourmet/faker": "^1.0"
+        "gourmet/faker": "^1.0",
+        "league/commonmark": "^0.13"
     },
     "require-dev": {
         "psy/psysh": "@stable",
